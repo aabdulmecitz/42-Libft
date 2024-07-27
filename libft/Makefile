@@ -1,10 +1,10 @@
-NAME =libft.a
+NAME = libft.a
 FLAG = -Wall -Wextra -Werror
 SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
 BONUS = $(shell find . -name "ft_lst*.c")
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+all:	$(NAME)
 
 $(NAME)
 	gcc $(FLAG) -c $(SRC)
@@ -14,8 +14,8 @@ bonus:
 	ar rc $(NAME) *.o
 clean:
 	rm -f *.o
-fclean: clean
+fclean:	clean
 	rm -f $(NAME)
 re:	fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY:	all bonus clean fclean re

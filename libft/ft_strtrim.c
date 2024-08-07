@@ -23,7 +23,7 @@ char    *ft_strtrim_start(char const *str, char const *set)
         j = 0;
         while (str[i + j] == set[j])
             j++;
-        if (j == ft_strlen(set))
+        if ((size_t)j == ft_strlen(set))
             break;
         i++;
     }
@@ -54,7 +54,7 @@ char    *ft_strtrim_end(char const *str, char const *set)
     char *trimmed_str = malloc(sizeof(char) * (str_len + 1));
     if (!trimmed_str)
         return NULL;
-    ft_strncpy(trimmed_str, str, str_len);
+    ft_strlcpy(trimmed_str, str, str_len);
     trimmed_str[str_len] = '\0';
     return trimmed_str;
 }
@@ -75,7 +75,7 @@ char	*ft_strtrim(char const *s1, char const *set)
         char *trimmed_str = malloc(sizeof(char) * (ft_strlen(last) + 1));
         if (!trimmed_str)
             return NULL;
-        ft_strncpy(trimmed_str, last, ft_strlen(last));
+        ft_strlcpy(trimmed_str, last, ft_strlen(last));
         trimmed_str[ft_strlen(last)] = '\0';
         free(prccs);
         return trimmed_str;

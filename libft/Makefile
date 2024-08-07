@@ -5,6 +5,8 @@ BONUS = $(shell find . -name "ft_lst*.c")
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
+MAINS = $(shell find . -name "ft_*_main.c")
+
 all: $(NAME)
 
 $(NAME): $(OBJ)

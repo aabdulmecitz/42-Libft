@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-# include    <stdlib.h>
-# include    <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -56,9 +56,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
 typedef struct s_list
 {
-    void *content;
-    struct s_list *next;
-}   t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);

@@ -6,7 +6,7 @@
 /*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 03:22:35 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/09/14 05:33:24 by aabdulmecit      ###   ########.fr       */
+/*   Updated: 2024/09/14 16:13:30 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,8 +182,6 @@ int	main(void)
     ft_lstclear(&list, del);
     printf("After ft_lstclear: ");
     print_list(list);
-
-    return 0;
 	
 	return 0;
 }

@@ -6,13 +6,42 @@
 /*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 03:22:35 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/09/14 03:27:20 by aabdulmecit      ###   ########.fr       */
+/*   Updated: 2024/09/14 03:52:07 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
+#include <ctype.h>   // toupper
+
+void print_list(t_list *lst);
+void del(void *content);
+void *to_uppercase(void *content);
+
+// Yardımcı fonksiyonlar
+void print_list(t_list *lst)
+{
+    while (lst)
+    {
+        printf("%s -> ", (char *)lst->content);
+        lst = lst->next;
+    }
+    printf("NULL\n");
+}
+
+void del(void *content)
+{
+    free(content);
+}
+
+void *to_uppercase(void *content)
+{
+    char *str = (char *)content;
+    for (int i = 0; str[i]; i++)
+        str[i] = toupper((unsigned char)str[i]);
+    return content;
+}
 
 int	main(void)
 {
@@ -107,12 +136,54 @@ int	main(void)
 	}
 	free(split);
 
-	// // Liste işlemleri
-	// t_list *list = ft_lstnew("First node");
-	// ft_lstadd_back(&list, ft_lstnew("Second node"));
-	// printf("ft_lstsize: %d\n", ft_lstsize(list));
-	// printf("ft_lstlast: %s\n", (char *)ft_lstlast(list)->content);
-	// ft_lstclear(&list, free);
+	//-----------------------------------BONUS--------------------------------------------------------------
 
+	t_list *list = NULL;
+    t_list *new_node;
+    char *content;
+
+    // ft_lstnew
+    content = strdup("node1");
+    new_node = ft_lstnew(content);
+    if (new_node)
+        printf("ft_lstnew: %s\n", (char *)new_node->content);
+
+    // ft_lstadd_front
+    content = strdup("node2");
+    new_node = ft_lstnew(content);
+    ft_lstadd_front(&list, new_node);
+    printf("ft_lstadd_front: ");
+    print_list(list);
+
+    // ft_lstadd_back
+    content = strdup("node3");
+    new_node = ft_lstnew(content);
+    ft_lstadd_back(&list, new_node);
+    printf("ft_lstadd_back: ");
+    print_list(list);
+
+    // ft_lstsize
+    printf("ft_lstsize: %d\n", ft_lstsize(list));
+
+    // ft_lstlast
+    t_list *last = ft_lstlast(list);
+    printf("ft_lstlast: %s\n", (char *)last->content);
+
+    // ft_lstmap
+    t_list *mapped_list = ft_lstmap(list, to_uppercase, del);
+    printf("ft_lstmap (to_uppercase): ");
+    print_list(mapped_list);
+
+    // ft_lstiter
+    printf("ft_lstiter (print content): ");
+    ft_lstiter(list, (void (*)(void *))puts);
+
+    // ft_lstclear
+    ft_lstclear(&list, del);
+    printf("After ft_lstclear: ");
+    print_list(list);
+
+    return 0;
+	
 	return 0;
 }

@@ -5,17 +5,16 @@ BONUS = $(shell find . -name "ft_lst*.c")
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
-MAINS = $(shell find . -name "ft_*_main.c")
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(FLAG) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 bonus: $(NAME) $(BONUS_OBJ)
-	gcc $(FLAG) -c $(BONUS)
-	ar rc $(NAME) $(BONUS_OBJ)
+	ar rcs $(NAME) $(BONUS_OBJ)
+
+%.o: %.c libft.h
+	$(CC) $(FLAG) -I. -c $< -o $@
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)

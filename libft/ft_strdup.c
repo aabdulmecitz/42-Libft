@@ -14,18 +14,22 @@
 
 char	*ft_strdup(const char *s1)
 {
-    int i;
-    char *p1;
+    char	*dup;
+	size_t	len;
+	size_t	i;
 
-    i = 0;
-    p1 = malloc(sizeof(char) * (ft_strlen(s1) + 1));
-    if(!p1)
-        return(NULL);
-    while (s1[i])
-    {
-        p1[i] = s1[i];
-        i++;
-    }
-    p1[i] = 0;
-    return (NULL);
+	len = 0;
+	i = 0;
+	while (s1[len])
+		len++;
+	dup = (char *)malloc((len + 1) * sizeof(char));
+	if (!dup)
+		return (NULL);
+	while (i < len)
+	{
+		dup[i] = s1[i];
+		i++;
+	}
+	dup[len] = '\0';
+	return (dup);
 }

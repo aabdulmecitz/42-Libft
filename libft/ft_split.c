@@ -12,26 +12,26 @@
 
 #include "libft.h"
 
-int ft_count_words(char const *str, char c)
+int	ft_count_words(char const *str, char c)
 {
-    int num;
-    int i;
+	int	num;
+	int	i;
 
-    num = 0;
-    i = 0;
-    while (str[i] != 0)
-    {
-        if (str[i] == c)
-            i++;
-        else
-        {
-            num++;
-            while (str[i] != 0 && str[i] != c)
-                i++;
-        }
-        i++;
-    }
-    return(num);
+	num = 0;
+	i = 0;
+	while (str[i] != 0)
+	{
+		if (str[i] == c)
+			i++;
+		else
+		{
+			num++;
+			while (str[i] != 0 && str[i] != c)
+				i++;
+		}
+		i++;
+	}
+	return (num);
 }
 
 char	*ft_make_words(char *word, char const *s, int j, int word_ln)
@@ -40,8 +40,8 @@ char	*ft_make_words(char *word, char const *s, int j, int word_ln)
 
 	i = 0;
 	while (word_ln > 0)
-        word[i++] = s[j - word_ln--]; 
-    word[i] = 0;
+		word[i++] = s[j - word_ln--];
+	word[i] = 0;
 	return (word);
 }
 
@@ -52,7 +52,7 @@ char	**ft_split_words(char **res, const char *s, char c, int word_ct)
 	int	word_ln;
 
 	i = 0;
-	j = 0 ;
+	j = 0;
 	word_ln = 0;
 	while (s[j] && i < word_ct)
 	{
@@ -76,7 +76,7 @@ char	**ft_split_words(char **res, const char *s, char c, int word_ct)
 
 char	**ft_split(char const *s, char c)
 {
-	int			word_ct;
+	int		word_ct;
 	char	**res;
 
 	if (s == 0)

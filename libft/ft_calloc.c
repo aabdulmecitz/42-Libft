@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-    void *mem;
+	void	*mem;
 
-    mem = malloc(count * size);
-    if(!mem)
-        return(0);
-    ft_memset(mem, 0, size);
-    return (mem);
+	mem = malloc(count * size);
+	if (!mem)
+		return (0);
+	ft_memset(mem, 0, size);
+	return (mem);
 }

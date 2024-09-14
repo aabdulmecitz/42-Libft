@@ -14,19 +14,19 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char *result;
-    int i;
+	char	*result;
+	int		i;
 
-    if(!s)
-        return (NULL);
-    i = 0;
-    result = ft_strdup(s);
-    if(!result)
-        return (NULL);
-    while(result[i] != 0)
-    {
-        result[i] = f(i, result[i]);
-        i++;
-    }
-    return (result);
+	if (!s)
+		return (NULL);
+	i = 0;
+	result = ft_strdup(s);
+	if (!result)
+		return (NULL);
+	while (result[i] != 0)
+	{
+		result[i] = f(i, result[i]);
+		i++;
+	}
+	return (result);
 }

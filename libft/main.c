@@ -6,7 +6,7 @@
 /*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 03:22:35 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/09/14 03:52:07 by aabdulmecit      ###   ########.fr       */
+/*   Updated: 2024/09/14 05:33:24 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ int	main(void)
 	printf("ft_strjoin: %s\n", joined);
 	free(joined);
 
-	char *trimmed = ft_strtrim("  trim me  ", " ");
+	char *trimmed = ft_strtrim("  trim me  ", "r");
 	printf("ft_strtrim: %s\n", trimmed);
 	free(trimmed);
 

@@ -10,11 +10,14 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(NAME) $(BONUS_OBJ)
-	ar rcs $(NAME) $(BONUS_OBJ)
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
-%.o: %.c libft.h
-	$(CC) $(FLAG) -I. -c $< -o $@
+$(OBJ): %.o: %.c
+	gcc $(FLAG) -c $< -o $@
+
+$(BONUS_OBJ): %.o: %.c
+	gcc $(FLAG) -c $< -o $@
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)

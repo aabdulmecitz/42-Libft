@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 06:32:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/03 06:32:25 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/07 12:40:07 by aozkaya           #+#    #+#             */
+/*   Updated: 2024/10/07 12:40:07 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strtrim_start(char const *str, char const *set)
 	while (str[i])
 	{
 		j = 0;
-		while (str[i + j] == set[j])
+		while (set[j] && str[i + j] == set[j])
 			j++;
-		if ((size_t)j == ft_strlen(set))
+		if (set[j] == '\0')
 			break ;
 		i++;
 	}
@@ -52,6 +52,7 @@ char	*ft_strtrim_end(char const *str, char const *set)
 	if (!trimmed_str)
 		return (NULL);
 	ft_strlcpy(trimmed_str, str, str_len + 1);
+	trimmed_str[str_len] = '\0';
 	return (trimmed_str);
 }
 
@@ -72,8 +73,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		trimmed_str = malloc(sizeof(char) * (ft_strlen(last) + 1));
 		if (!trimmed_str)
 			return (NULL);
-		ft_strlcpy(trimmed_str, last, ft_strlen(last));
-		trimmed_str[ft_strlen(last)] = '\0';
+		ft_strlcpy(trimmed_str, last, ft_strlen(last) + 1);
 		free(prccs);
 		return (trimmed_str);
 	}

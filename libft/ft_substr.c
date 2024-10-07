@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 05:59:40 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/03 05:59:40 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/07 12:40:12 by aozkaya           #+#    #+#             */
+/*   Updated: 2024/10/07 12:40:12 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			i++;
 		render = (char *)malloc((sizeof(char) * i) + 1);
 		if (!render)
-			return (NULL);
+			return ("");
 		j = 0;
 		while (j < i)
 		{
@@ -37,5 +37,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		render[j] = 0;
 		return (render);
 	}
-	return (NULL);
+	return ("");
 }

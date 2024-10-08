@@ -15,27 +15,26 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	render_len;
 	char	*render;
 
-	if (*s)
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s) || len == 0)
+		return (ft_strdup(""));
+	i = 0;
+	render_len = ft_strlen(s + start);
+	if (render_len > len)
+		render_len = len;
+	render = (char *)malloc(sizeof(char) * (render_len + 1));
+	if (!render)
+		return (NULL);
+	i = 0;
+	while (i < render_len)
 	{
-		if (start >= ft_strlen(s) || len == 0 || ft_strlen(s) == 0)
-			return (ft_strdup(""));
-		i = 0;
-		while (i < len && s[i + start] != 0)
-			i++;
-		render = (char *)malloc((sizeof(char) * i) + 1);
-		if (!render)
-			return ("");
-		j = 0;
-		while (j < i)
-		{
-			render[j] = s[start + j];
-			j++;
-		}
-		render[j] = 0;
-		return (render);
+		render[i] = s[start + i];
+		i++;
 	}
-	return ("");
+	render[i] = 0;
+	return (render);
 }

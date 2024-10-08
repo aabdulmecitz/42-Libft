@@ -29,9 +29,16 @@ int	ft_count_words(char const *str, char c)
 			while (str[i] != 0 && str[i] != c)
 				i++;
 		}
-		i++;
 	}
 	return (num);
+}
+
+char	ft_free_all(char **res, int i)
+{
+	while (i-- > 0)
+		free(res[i]);
+	free(res);
+	return (0);
 }
 
 char	*ft_make_words(char *word, char const *s, int j, int word_ln)
@@ -65,7 +72,7 @@ char	**ft_split_words(char **res, const char *s, char c, int word_ct)
 		}
 		res[i] = (char *)malloc(sizeof(char) * (word_ln + 1));
 		if (!res[i])
-			return (0);
+			ft_free_all(res, i);
 		ft_make_words (res[i], s, j, word_ln);
 		word_ln = 0;
 		i++;

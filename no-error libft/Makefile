@@ -10,15 +10,15 @@ BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstit
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
-all: $(NAME)
-
 $(NAME):
 	gcc $(FLAG) -c $(SRC)
-	ar -rc $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
-bonus: 
+all: $(NAME)
+
+bonus:
 	gcc $(FLAG) -c $(BONUS)
-	ar -rc $(NAME) $(BONUS_OBJ)
+	ar rc $(NAME) $(BONUS_OBJ)
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)

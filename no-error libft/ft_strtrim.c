@@ -46,3 +46,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed_str, &s1[start], end - start + 2);
 	return (trimmed_str);
 }
+
+hsdjfgsdpy

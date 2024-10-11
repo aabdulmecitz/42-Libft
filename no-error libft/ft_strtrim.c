@@ -47,4 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trimmed_str);
 }
 
-hsdjfgsdpy

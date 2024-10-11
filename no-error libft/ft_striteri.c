@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -19,9 +21,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != 0)
 	{
-		(*f)(i, &s[i]);
+		(*f)(i, &s[i]); //ft_function((i, &s[i]));
 		i++;
 	}
+	printf("-----%s\n", s);
 }
-
-holh

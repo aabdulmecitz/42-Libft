@@ -6,7 +6,7 @@
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:57:00 by aozkaya           #+#    #+#             */
-/*   Updated: 2024/10/11 20:02:46 by aozkaya          ###   ########.fr       */
+/*   Updated: 2024/10/12 13:09:07 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,50 @@
 // 	return (NULL);
 // }
 
-void ft_function(unsigned int i, char  *a)
-{
-	a[i] = 't';
-}
+// void ft_function(unsigned int i, char  *a)
+// {
+// 	a[i] = 't';
+// }
 
-void ft_function2(unsigned int i, char * a)
-{
-	a[i] = 'c';
-}
-void ft_function3(unsigned int i, char * a)
-{
-	a[i] = 'a';
-}
+// void ft_function2(unsigned int i, char * a)
+// {
+// 	a[i] = 'c';
+// }
+// void ft_function3(unsigned int i, char * a)
+// {
+// 	a[i] = 'a';
+// }
 
+// void f()
+// {
+    
+//   return (NULL);
+// }
+
+// void del(char *s)
+// {
+//   free(s);
+// }
 int main()
 {
+
+  // t_list *str = ft_lstnew("ggsd");
+
+  // ft_lstmap(str, f, del);
+
+  
+  // char *a = "fasgss";
+  // char *b = "tyert";
+  // char *c = "lhj.hj";
+  // char **str = (char *[])[a, b, c];
+  // int i = 0;
+  // while (str[i]!=0)
+  // {
+  //   printf("%s", str[i]);
+  //   i++;
+  // }
+  
+  
   //  // int i = open("./a.txt", O_RDWR);
   //   int j = open("./b.txt", O_RDWR);
 
@@ -76,4 +104,5 @@ int main()
 // c de listeler sadece bir veri tipi alir.
 // pointerlarin aldigı adress değeri aslında 32 bitlik birşey o yüzden 2 üzeri 32 değer alıyor. unsigned int oluyor.
 // printf("\033[32mBu yeşil bir metin.\033[0m\n");  // Yeşil yazı yazdıran marker
+// static  olarak tanımlandığında fonksiyon sadece o file ın içerisinde erişilebilir olur. başka bir dosyadan erişilebilir olursa hata verirr.
 

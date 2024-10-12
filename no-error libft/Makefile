@@ -36,5 +36,9 @@ run: re
 
 runwbonus: re bonus run
 
-
+push:
+	git add .
+	git commit -m "thisone"
+	git push
+	
 .PHONY: all bonus clean fclean re

@@ -6,7 +6,7 @@
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:57:00 by aozkaya           #+#    #+#             */
-/*   Updated: 2024/10/12 22:19:25 by aozkaya          ###   ########.fr       */
+/*   Updated: 2024/10/13 13:33:52 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ int main()
   t_list *new = malloc(sizeof(t_list));
   new->content = "sgasf";
   list->content = "qwrety";
-  ft_lstadd_front(&list, );
-  printf("%d", );
+  // ft_lstadd_front(&list, );
+  // printf("%d", );
   // t_list *str = ft_lstnew("ggsd");
 
   // ft_lstmap(str, f, del);

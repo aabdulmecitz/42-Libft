@@ -22,4 +22,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_memset(mem, 0, count * size);
 	return (mem);
 }
-// this function opens a space and fills with '\0'

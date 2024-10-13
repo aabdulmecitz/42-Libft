@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-long	ft_nop(long n)
+static long	ft_nop(long n)
 {
 	long	count;
 
@@ -32,7 +32,7 @@ long	ft_nop(long n)
 	return (count);
 }
 
-void	ft_putnum(long num, char *str, int len)
+static void	ft_putnum(long num, char *str, int len)
 {
 	if (num != -2147483648)
 	{

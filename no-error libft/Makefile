@@ -10,17 +10,15 @@ BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstit
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
-$(NAME): 
+$(NAME):
 	gcc $(FLAG) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
-	rm -f $(OBJ) $(BONUS_OBJ)
 
 all: $(NAME)
 
 bonus:
 	gcc $(FLAG) -c $(BONUS)
 	ar rc $(NAME) $(BONUS_OBJ)
-	rm -f $(OBJ) $(BONUS_OBJ)
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -30,15 +28,4 @@ fclean: clean
 
 re: fclean all
 
-run: re
-	gcc main.c libft.a
-	./a.out
-
-runwbonus: re bonus run
-
-push:
-	git add .
-	git commit -m "thisone"
-	git push
-	
 .PHONY: all bonus clean fclean re

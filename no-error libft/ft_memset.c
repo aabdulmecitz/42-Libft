@@ -19,12 +19,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		((char *)b)[i] = c;
+		((unsigned char *)b)[i] = c;
 		i++;
 	}
 	return (b);
 }
-
-// belli bir boyut kadarına int de belirleidğimiz charı koyar.
-// printf d yazinca 4 byte okuyor o yüzden sayı olsa bile byte byte yazınca 4 byte ı birden okuyor.
-// printf c yazınca 1 byte okuyor o yüzcen direk charı yazdırııyor.

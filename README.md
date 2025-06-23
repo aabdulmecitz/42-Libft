@@ -1,8 +1,8 @@
 <div align="center">
 
-  # 42 ft_printf Project
+  # 42 Libft Project
 
-  <p align="center"><a href="https://github.com/aabdulmecitz/42-Libft" target="_blank"><img align="center" alt="ft_printf" src="https://github.com/mcombeau/mcombeau/blob/main/42_badges/libftm.png?raw=true"> </a></p>
+  <p align="center"><a href="https://github.com/aabdulmecitz/42-Libft" target="_blank"><img align="center" alt="libft" src="https://github.com/mcombeau/mcombeau/blob/main/42_badges/libftm.png?raw=true"> </a></p>
 
   [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
   [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -16,144 +16,135 @@
   <p align="center">125/100 :white_check_mark:</p>
 </div>
 
-## 📋 İçindekiler
+## 📋 Table of Contents
 
-- [Proje Hakkında](#proje-hakkında)
-- [Fonksiyonlar](#fonksiyonlar)
-- [Kurulum ve Kullanım](#kurulum-ve-kullanım)
-- [Bonus Bölümü](#bonus-bölümü)
-- [Testler](#testler)
+- [About the Project](#about-the-project)
+- [Functions](#functions)
+- [Installation and Usage](#installation-and-usage)
+- [Bonus Part](#bonus-part)
+- [Tests](#tests)
 
-## Proje Hakkında
+## About the Project
 
-Libft projesi, 42 okulunun ilk projesidir ve temel C fonksiyonlarını içeren bir kütüphane oluşturmayı amaçlar. Bu kütüphane, ilerideki projelerde sürekli olarak kullanılacak ve genişletilebilecektir. Proje, standart C kütüphanesindeki bazı fonksiyonları yeniden yazmayı ve bazı ek yardımcı fonksiyonlar oluşturmayı içerir.
+Libft is the first project at 42 School, aiming to create a library with essential C functions. This library will be used and extended in future projects. The project involves rewriting several standard C library functions and creating additional utility functions.
 
-## Fonksiyonlar
+## Functions
 
-### İlk Bölüm - Libc Fonksiyonları
+### Part 1 - Libc Functions
 
-Bu bölüm, standart C kütüphanesindeki bazı temel fonksiyonların yeniden yazılmış versiyonlarını içerir:
+This section includes reimplementations of some basic functions from the standard C library:
 
-| Fonksiyon | Açıklama |
+| Function | Description |
 |-----------|----------|
-| ft_isalpha | Bir karakterin alfabetik olup olmadığını kontrol eder |
-| ft_isdigit | Bir karakterin rakam olup olmadığını kontrol eder |
-| ft_isalnum | Bir karakterin alfanümerik olup olmadığını kontrol eder |
-| ft_isascii | Bir karakterin ASCII tablosunda olup olmadığını kontrol eder |
-| ft_isprint | Bir karakterin yazdırılabilir olup olmadığını kontrol eder |
-| ft_strlen | Bir dizinin uzunluğunu hesaplar |
-| ft_memset | Belleğin belirli bir alanını belirtilen değerle doldurur |
-| ft_bzero | Belleğin belirli bir alanını sıfırlar |
-| ft_memcpy | Bir bellek alanından başka bir bellek alanına veri kopyalar |
-| ft_memmove | Çakışma olsa bile bellek alanları arasında veri kopyalar |
-| ft_strlcpy | Bir diziden başka bir dizine belirli bir uzunlukta güvenli kopyalama yapar |
-| ft_strlcat | Bir dizinin sonuna başka bir diziyi güvenli bir şekilde ekler |
-| ft_toupper | Küçük harfi büyük harfe çevirir |
-| ft_tolower | Büyük harfi küçük harfe çevirir |
-| ft_strchr | Bir dizide belirli bir karakteri ilk bulunduğu yerden itibaren arar |
-| ft_strrchr | Bir dizide belirli bir karakteri sondan başlayarak arar |
-| ft_strncmp | İki diziyi belirtilen karakter sayısı kadar karşılaştırır |
-| ft_memchr | Bellek bloğu içinde belirli bir baytı arar |
-| ft_memcmp | İki bellek bloğunu karşılaştırır |
-| ft_strnstr | Bir dizi içinde başka bir alt diziyi arar |
-| ft_atoi | Bir dizi içindeki sayısal değeri tam sayıya çevirir |
-| ft_calloc | Belirli bir boyutta bellek alanı ayırır ve sıfırla doldurur |
-| ft_strdup | Bir dizinin dinamik olarak çoğaltılmış kopyasını oluşturur |
+| ft_isalpha | Checks if a character is alphabetic |
+| ft_isdigit | Checks if a character is a digit |
+| ft_isalnum | Checks if a character is alphanumeric |
+| ft_isascii | Checks if a character is in the ASCII table |
+| ft_isprint | Checks if a character is printable |
+| ft_strlen | Calculates the length of a string |
+| ft_memset | Fills a memory area with a specific value |
+| ft_bzero | Sets a memory area to zero |
+| ft_memcpy | Copies data from one memory area to another |
+| ft_memmove | Copies data between memory areas, even if they overlap |
+| ft_strlcpy | Securely copies from one string to another with a specified length |
+| ft_strlcat | Securely appends one string to the end of another |
+| ft_toupper | Converts lowercase letter to uppercase |
+| ft_tolower | Converts uppercase letter to lowercase |
+| ft_strchr | Searches for a character in a string, starting from the beginning |
+| ft_strrchr | Searches for a character in a string, starting from the end |
+| ft_strncmp | Compares two strings up to a specified number of characters |
+| ft_memchr | Searches for a byte in a memory block |
+| ft_memcmp | Compares two memory blocks |
+| ft_strnstr | Searches for a substring within a string |
+| ft_atoi | Converts a numerical string to an integer |
+| ft_calloc | Allocates memory with a specified size and fills it with zeros |
+| ft_strdup | Creates a dynamically allocated copy of a string |
 
-### İkinci Bölüm - Ek Fonksiyonlar
+### Part 2 - Additional Functions
 
-Bu bölüm, standart kütüphanede olmayan ancak yararlı olan fonksiyonları içerir:
+This section includes functions that are not in the standard library but are useful:
 
-| Fonksiyon | Açıklama |
+| Function | Description |
 |-----------|----------|
-| ft_substr | Bir diziden alt dizi çıkarır |
-| ft_strjoin | İki diziyi birleştirerek yeni bir dizi oluşturur |
-| ft_strtrim | Bir dizinin başındaki ve sonundaki belirli karakterleri keser |
-| ft_split | Bir diziyi belirli bir ayırıcı karaktere göre böler |
-| ft_itoa | Tam sayıyı dizi biçimine dönüştürür |
-| ft_strmapi | Dizinin her karakterine bir fonksiyon uygular |
-| ft_striteri | Dizinin her karakterine bir fonksiyon uygular (işaretçi ile) |
-| ft_putchar_fd | Bir karakteri belirtilen dosya tanımlayıcısına yazar |
-| ft_putstr_fd | Bir diziyi belirtilen dosya tanımlayıcısına yazar |
-| ft_putendl_fd | Bir diziyi belirtilen dosya tanımlayıcısına yazar ve yeni satır ekler |
-| ft_putnbr_fd | Bir sayıyı belirtilen dosya tanımlayıcısına yazar |
+| ft_substr | Extracts a substring from a string |
+| ft_strjoin | Creates a new string by joining two strings |
+| ft_strtrim | Removes specified characters from the beginning and end of a string |
+| ft_split | Splits a string based on a specified delimiter character |
+| ft_itoa | Converts an integer to a string |
+| ft_strmapi | Applies a function to each character in a string |
+| ft_striteri | Applies a function to each character in a string (with pointer) |
+| ft_putchar_fd | Writes a character to a specified file descriptor |
+| ft_putstr_fd | Writes a string to a specified file descriptor |
+| ft_putendl_fd | Writes a string to a specified file descriptor and adds a newline |
+| ft_putnbr_fd | Writes a number to a specified file descriptor |
 
-## Kurulum ve Kullanım
+## Installation and Usage
 
-1. Projeyi klonlayın:
+1. Clone the repository:
    ```bash
    git clone <repo-url> libft
    cd libft
    ```
 
-2. Kütüphaneyi derleyin:
+2. Compile the library:
    ```bash
    make
    ```
 
-3. Bonus fonksiyonlarını da derlemek için:
+3. To compile with bonus functions:
    ```bash
    make bonus
    ```
 
-4. Kütüphaneyi temizlemek için:
+4. To clean the library:
    ```bash
-   make clean    # Sadece .o dosyalarını siler
-   make fclean   # Hem .o dosyalarını hem de kütüphaneyi siler
-   make re       # Temizler ve yeniden derler
+   make clean    # Removes only .o files
+   make fclean   # Removes both .o files and the library
+   make re       # Cleans and recompiles
    ```
 
-5. Kendi programınızda kullanmak için:
+5. To use in your own program:
    ```c
    #include "libft.h"
    
    int main(void)
    {
-       // Libft fonksiyonlarını kullanabilirsiniz
-       ft_putstr_fd("Merhaba 42!", 1);
+       // You can use Libft functions
+       ft_putstr_fd("Hello 42!", 1);
        return (0);
    }
    ```
 
-6. Programınızı derlemek için:
+6. To compile your program:
    ```bash
    gcc -o program program.c libft.a
    ```
 
-## Bonus Bölümü
+## Bonus Part
 
-Bağlı listeler üzerinde işlem yapmak için ek fonksiyonlar:
+Additional functions for working with linked lists:
 
-| Fonksiyon | Açıklama |
+| Function | Description |
 |-----------|----------|
-| ft_lstnew | Yeni bir liste düğümü oluşturur |
-| ft_lstadd_front | Liste başına yeni bir düğüm ekler |
-| ft_lstsize | Listedeki düğüm sayısını hesaplar |
-| ft_lstlast | Listenin son düğümünü döndürür |
-| ft_lstadd_back | Liste sonuna yeni bir düğüm ekler |
-| ft_lstdelone | Bir düğümün içeriğini siler |
-| ft_lstclear | Bir listeyi ve tüm düğümlerini siler |
-| ft_lstiter | Listenin her düğümüne bir fonksiyon uygular |
-| ft_lstmap | Listenin her düğümüne bir fonksiyon uygular ve yeni bir liste oluşturur |
+| ft_lstnew | Creates a new list node |
+| ft_lstadd_front | Adds a new node to the beginning of the list |
+| ft_lstsize | Counts the number of nodes in a list |
+| ft_lstlast | Returns the last node of the list |
+| ft_lstadd_back | Adds a new node to the end of the list |
+| ft_lstdelone | Deletes a node's content |
+| ft_lstclear | Deletes a list and all its nodes |
+| ft_lstiter | Applies a function to each node in the list |
+| ft_lstmap | Applies a function to each node and creates a new list |
 
-## Testler
+## Notes
 
-Projeyi test etmek için çeşitli test frameworkleri kullanabilirsiniz:
-
-- [Libftdestructor](https://github.com/t0mm4rx/libftdestructor)
-- [Libftest](https://github.com/jtoty/Libftest)
-- [libft-unit-test](https://github.com/alelievr/libft-unit-test)
-- [libft-war-machine](https://github.com/ska42/libft-war-machine)
-
-## Notlar
-
-- Projede sadece izin verilen fonksiyonlar kullanılmıştır.
-- Tüm fonksiyonlar 42 Norm kurallarına göre yazılmıştır.
-- Bu kütüphane ilerideki 42 projeleri için temel oluşturmaktadır.
+- Only allowed functions are used in the project.
+- All functions are written according to 42 Norm rules.
+- This library forms the foundation for future 42 projects.
 
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/42-İstanbul-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/42-Istanbul-000000?style=for-the-badge" />
 </p>
 
